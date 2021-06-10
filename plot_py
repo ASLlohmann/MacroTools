@@ -1,7 +1,8 @@
 #Plotting in R using Matplotlib/
 
-plot_py = function(x, title=NULL, ylab=NULL, xlab=NULL, color="red"){
+plot_py = function(x, title=NULL, ylab=NULL, xlab=NULL, color="red", theme=NULL){
 sns = import("matplotlib.pyplot")
+sns$style$use(theme)
 if (is.null(color) == FALSE){
 sns$plot(x,color=color)}  else {sns$plot(x)}
 sns$title(title)
@@ -9,3 +10,4 @@ sns$xlabel(xlab)
 sns$ylabel(ylab)
 sns$show()
 }
+
