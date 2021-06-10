@@ -1,13 +1,12 @@
 #Plotting in R using Matplotlib/
 
-plot_py = function(x, title=NULL, ylab=NULL, xlab=NULL, color="red", theme=NULL){
+plot_py = function(x, title=NULL, ylab=NULL, xlab=NULL, color="red", theme=NULL, ls="-"){
 sns = import("matplotlib.pyplot")
 sns$style$use(theme)
 if (is.null(color) == FALSE){
-sns$plot(x,color=color)}  else {sns$plot(x)}
+sns$plot(x,color=color, ls=ls)}  else {sns$plot(x,  ls=ls)}
 sns$title(title)
 sns$xlabel(xlab)
 sns$ylabel(ylab)
 sns$show()
 }
-
