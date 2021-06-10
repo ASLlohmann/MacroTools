@@ -1,0 +1,5 @@
+plot_py = function(x){
+sns = import("matplotlib.pyplot")
+sns$plot(x)
+sns$show()
+}
