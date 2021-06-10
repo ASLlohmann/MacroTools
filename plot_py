@@ -1,5 +1,11 @@
-plot_py = function(x){
+#Plotting in R using Matplotlib/
+
+plot_py = function(x, title=NULL, ylab=NULL, xlab=NULL, color="red"){
 sns = import("matplotlib.pyplot")
-sns$plot(x)
+if (is.null(color) == FALSE){
+sns$plot(x,color=color)}  else {sns$plot(x)}
+sns$title(title)
+sns$xlabel(xlab)
+sns$ylabel(ylab)
 sns$show()
 }
